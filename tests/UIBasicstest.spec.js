@@ -43,3 +43,14 @@ test ('Browser context Playwright test ',async ({browser})=>
      console.log(await page.title());
      await expect(page).toHaveTitle('Google');     
     });
+
+    test ('Browser context Playwright test details',async ({browser})=>
+        {
+        //chrome  -plugins/cookeies
+         const context =await browser.newContext();
+         const page =await context.newPage();
+         await page.goto('https://rahulshettyacademy.com/loginpagePractise');
+         //css type fill 
+         await page.locator('#username').fill('rahulshettyacademy');
+
+        });
