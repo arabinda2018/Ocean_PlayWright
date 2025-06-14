@@ -30,10 +30,9 @@ const {test, expect}=require ('@playwright/test');
 test ('Browser context Playwright test ',async ({browser})=>
 {
 //chrome  -plugins/cookeies
-const context =await browser.newContext();
+ const context =await browser.newContext();
  const page =await context.newPage();
  await page.goto('https://rahulshettyacademy.com/loginpagePractise');
-
 });
 
 //test.only ('Page Playwright test',async ({page})=>
@@ -42,8 +41,5 @@ const context =await browser.newContext();
      await page.goto('https://www.google.com');
      //get title  and then put assertion
      console.log(await page.title());
-
-    await expect(page).toHaveTitle('Google');
-
-     
+     await expect(page).toHaveTitle('Google');     
     });
