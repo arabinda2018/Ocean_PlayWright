@@ -12,7 +12,7 @@ const config  =({
   },
   use:{
     browserName: 'chromium',
-    headless: false
+    headless: true
   },
   reporter : 'html',
 });
